@@ -1,0 +1,19 @@
+< THE SYMBOL TABLE >  song.com  --  emu8086 assembler version: 4.08 
+===================================================================================================
+Name                     	Offset    	Size      	Type      	Segment   
+===================================================================================================
+SOLO                     	00103     	2         	VAR       	(NOSEG)   
+CODE                     	001CF     	-1        	LABEL     	(NOSEG)   
+MAIN                     	001CF     	-1        	NEAR      	(NOSEG)   
+CHANGE                   	001DD     	-1        	LABEL     	(NOSEG)   
+START_DELAY_OFF          	001E8     	-1        	LABEL     	(NOSEG)   
+OUT_LOOP                 	001F7     	-1        	LABEL     	(NOSEG)   
+SET_TIMER2               	001FB     	-1        	NEAR      	(NOSEG)   
+SPK_ON                   	00202     	-1        	NEAR      	(NOSEG)   
+START_DELAY_ON           	00210     	-1        	LABEL     	(NOSEG)   
+DELAY                    	0021B     	-1        	NEAR      	(NOSEG)   
+WAIT1                    	00220     	-1        	LABEL     	(NOSEG)   
+===================================================================================================
+[ 10/12/2558  --  20:40:37 ] 
+< END >
+ 

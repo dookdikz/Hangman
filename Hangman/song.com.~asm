@@ -1,0 +1,384 @@
+
+; You may customize this and other start-up templates;
+; The location of this template is c:\emu8086\inc\0_com_template.txt
+
+org 100h
+
+.MODEL    SMALL
+.DATA
+
+
+;ความถี่เสียงของตัวโน๊ต  A
+A0 EQU 0A979H
+A1 EQU 54BDH
+A2 EQU 2A5EH
+A3 EQU 152FH
+A4 EQU 0A98H
+A5 EQU 054CH
+A6 EQU 02A6H
+A7 EQU 0152H
+
+;ความถี่เสียงของตัวโน๊ต  A#
+AC0 EQU 9FF7H
+AC1 EQU 4FFBH
+AC2 EQU 27EEH
+AC3 EQU 13FFH
+AC4 EQU 09FFH
+AC5 EQU 0500H
+AC6 EQU 0280H
+AC7 EQU 0140H
+
+;ความถี่เสียงของตัวโน๊ต  B
+B0 EQU 96FCH
+B1 EQU 4B7EH
+B2 EQU 25BFH
+B3 EQU 12E0H
+B4 EQU 0970H
+B5 EQU 04B8H
+B6 EQU 02A6H
+B7 EQU 012EH
+
+;ความถี่เสียงของตัวโน๊ต  C
+C1 EQU 8E83H
+C2 EQU 4741H
+C3 EQU 23A1H
+C4 EQU 11D0H
+C5 EQU 08E8H
+C6 EQU 0474H
+C7 EQU 023AH
+C8 EQU 011DH
+
+;ความถี่เสียงของตัวโน๊ต  C#
+CC1 EQU 8683H
+CC2 EQU 4341H
+CC3 EQU 21A1H
+CC4 EQU 10D0H
+CC5 EQU 0869H
+CC6 EQU 0434H
+CC7 EQU 021AH
+
+;ความถี่เสียงของตัวโน๊ต  D
+D1 EQU 7EE6H
+D2 EQU 3F78H
+D3 EQU 1FBEH
+D4 EQU 0FDFH
+D5 EQU 07EFH
+D6 EQU 03F8H
+D7 EQU 01FCH
+
+;ความถี่เสียงของตัวโน๊ต  D#
+DC1 EQU 77D6H
+DC2 EQU 3BEBH
+DC3 EQU 1DF6H
+DC4 EQU 0EFBH
+DC5 EQU 077DH
+DC6 EQU 03BFH
+DC7 EQU 01DFH
+
+;ความถี่เสียงของตัวโน๊ต  E
+E1 EQU 711DH
+E2 EQU 388EH
+E3 EQU 1C47H
+E4 EQU 0E24H
+E5 EQU 0712H
+E6 EQU 0389H
+E7 EQU 01C4H
+
+;ความถี่เสียงของตัวโน๊ต  F
+F1 EQU 6AC2H
+F2 EQU 3562H
+F3 EQU 1AB1H
+F4 EQU 0D58H
+F5 EQU 06ACH
+F6 EQU 0356H
+F7 EQU 01ABH
+
+;ความถี่เสียงของตัวโน๊ต  F#
+FC1 EQU 64C5H
+FC2 EQU 3263H
+FC3 EQU 1931H
+FC4 EQU 0C99H
+FC5 EQU 064CH
+FC6 EQU 0326H
+FC7 EQU 0193H
+
+;ความถี่เสียงของตัวโน๊ต  G
+G1 EQU 5F1DH
+G2 EQU 2F8FH
+G3 EQU 17C7H
+G4 EQU 0BE4H
+G5 EQU 05F2H
+G6 EQU 02F9H
+G7 EQU 017CH
+
+;ความถี่เสียงของตัวโน๊ต  G#
+GC1 EQU 59C7H
+GC2 EQU 2CE3H
+GC3 EQU 1672H
+GC4 EQU 0B39H
+GC5 EQU 053CH
+GC6 EQU 02CEH
+GC7 EQU 0167H
+
+CONTROL_WORD EQU 10110110B ;0B6H
+COUNTER2 EQU 42H
+CONTROL_REGISTER_PORT EQU 43H
+;------------------------------------------END DECLARATION NOTE----------------------------------------------------
+
+
+
+
+SOLO DW 0H
+DB 5,10
+
+;START
+DW E5
+DB 50,1
+
+DW D5
+DB 50,1
+
+DW C5
+DB 50,1
+
+DW D5
+DB 50,1
+
+DW E5
+DB 50,1
+
+DW E5
+DB 50,1
+
+DW E5
+DB 50,3
+
+DW D5
+DB 50,1
+
+DW D5
+DB 50,1
+
+DW D5
+DB 50,3
+
+DW E5
+DB 50,1
+
+DW G5
+DB 50,1
+
+DW G5
+DB 50,3
+
+
+DW E5
+DB 50,1
+
+DW D5
+DB 50,1
+
+DW C5
+DB 50,1
+
+DW D5
+DB 50,1
+
+DW E5
+DB 50,1
+
+
+DW E5
+DB 50,1
+
+DW E5
+DB 50,3
+
+DW D5
+DB 50,1
+
+
+DW D5
+DB 50,1
+
+DW E5
+DB 50,1
+
+DW D5
+DB 50,1
+
+DW C5
+DB 50,9
+
+
+DW E5
+DB 50,1
+
+DW D5
+DB 50,1
+
+DW C5
+DB 50,1
+
+DW D5
+DB 50,1
+
+DW E5
+DB 50,1
+
+DW E5
+DB 50,1
+
+DW E5
+DB 50,3
+
+DW D5
+DB 50,1
+
+DW D5
+DB 50,1
+
+DW D5
+DB 50,3
+
+DW E5
+DB 50,1
+
+DW G5
+DB 50,1
+
+DW G5
+DB 50,3
+
+
+DW E5
+DB 50,1
+
+DW D5
+DB 50,1
+
+DW C5
+DB 50,1
+
+DW D5
+DB 50,1
+
+DW E5
+DB 50,1
+
+
+DW E5
+DB 50,1
+
+DW E5
+DB 50,3
+
+DW D5
+DB 50,1
+
+
+DW D5
+DB 50,1
+
+DW E5
+DB 50,1
+
+DW D5
+DB 50,1
+
+DW 0H
+DB 50,2
+
+
+
+;----------------------------------------------------MAIN PROGRAM-----------------------------------------------------
+.CODE
+MAIN  PROC    NEAR
+
+MOV    SI,0
+MOV    AX,@DATA
+MOV    DS,AX
+MOV    AL,CONTROL_WORD
+OUT    CONTROL_REGISTER_PORT,AL
+MOV    BX,OFFSET SOLO
+
+CHANGE:MOV    AX,[BX+SI]
+CALL    SET_TIMER2
+CALL    SPK_ON
+INC    SI
+MOV    CL,[BX+SI]
+
+START_DELAY_OFF: CALL    DELAY
+LOOP    START_DELAY_OFF
+INC    SI
+MOV    AX,[BX+SI]
+CMP    AX,0
+JZ    OUT_LOOP
+JMP    CHANGE
+
+OUT_LOOP:MOV    AH,4CH
+INT 21H
+
+MAIN    ENDP
+
+;---------------------------------------------------SET TIMER2--------------------------------------------------------
+SET_TIMER2   PROC    NEAR
+OUT    COUNTER2,AL
+MOV    AL,AH
+OUT    COUNTER2,AL
+RET
+SET_TIMER2     ENDP
+
+;---------------------------------------------------SPEEKER ON--------------------------------------------------------
+SPK_ON  PROC    NEAR
+PUSH    AX
+IN    AL,61H
+MOV    AH,AL
+OR    AL,3
+OUT    61H,AL
+ADD    SI,2
+MOV    CL,[BX+SI]
+
+START_DELAY_ON:CALL    DELAY
+
+LOOP    START_DELAY_ON
+MOV    AL,AH
+OUT    61H,AL
+POP    AX
+RET
+SPK_ON  ENDP
+
+;-----------------------------------------------------DELAY-----------------------------------------------------------
+DELAY   PROC    NEAR
+PUSH    AX
+PUSH    CX
+MOV    CX,850H ;DELAY VALUE
+
+
+WAIT1:IN    AL,61H
+AND    AL,10H
+CMP    AL,AH
+JE    WAIT1
+MOV    AH,AL
+LOOP    WAIT1
+POP    CX
+POP    AX
+RET
+DELAY ENDP
+
+END    MAIN
+
+
+
+
+
+ret
+
+
+
+
+
+
+
+
+; [SOURCE]: E:\5630300326\song.asm
